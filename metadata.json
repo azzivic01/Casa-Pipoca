@@ -1,0 +1,6 @@
+{
+  "name": "Casa Pipoca",
+  "description": "Ateliê de arte e brincadeira para crianças: oficinas de pintura, argila e experimentação criativa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

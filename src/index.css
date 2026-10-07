@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Bricolage Grotesque', sans-serif;
+  --font-sans: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+
+:root {
+  /* Cores obrigatórias do tema */
+  --tema-color-bg: #FFF7E8;
+  --tema-color-surface: #FFFFFF;
+  --tema-color-border: #E8DCC4;
+  --tema-color-text: #2A2140;
+  --tema-color-text-muted: #645A78;
+  --tema-color-accent: #BF3B20;
+  --tema-color-accent-ink: #BF3B20;
+  --tema-color-on-accent: #FFF7E8;
+
+  /* Formas do tema */
+  --tema-radius: 20px;
+  --tema-radius-lg: 36px;
+
+  /* Cores decorativas de apoio (apenas decorativas) */
+  --tema-color-deco-1: #FFB703;
+  --tema-color-deco-2: #3A86FF;
+  --tema-color-deco-3: #2EC4B6;
+
+  /* Fontes do tema */
+  --tema-font-display: 'Bricolage Grotesque', sans-serif;
+  --tema-font-body: 'DM Sans', sans-serif;
+  --tema-font-label: 'DM Sans', sans-serif;
+
+  /* Valores de movimento */
+  --motion-duration-fast: 150ms;
+  --motion-duration-base: 300ms;
+  --motion-duration-slow: 700ms;
+  --motion-duration-cinematic: 1000ms;
+  --motion-ease-base: cubic-bezier(0.4, 0, 0.2, 1);
+  --motion-ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-stagger: 80ms;
+}
+
+/* Base resets & styles */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--tema-font-body);
+  background-color: var(--tema-color-bg);
+  color: var(--tema-color-text);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--tema-color-bg);
+  color: var(--tema-color-text);
+  overflow-x: hidden;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Classes utilitárias com variáveis do tema */
+.font-display {
+  font-family: var(--tema-font-display);
+}
+
+.font-body {
+  font-family: var(--tema-font-body);
+}
+
+.font-label {
+  font-family: var(--tema-font-label);
+}
+
+/* Sombra sólida deslocada do kit de UI */
+.solid-shadow-sm {
+  box-shadow: 2px 2px 0px var(--tema-color-text);
+}
+
+.solid-shadow {
+  box-shadow: 4px 4px 0px var(--tema-color-text);
+}
+
+.solid-shadow-lg {
+  box-shadow: 6px 6px 0px var(--tema-color-text);
+}
+
+.solid-shadow-active {
+  box-shadow: 0px 0px 0px var(--tema-color-text);
+  transform: translate(4px, 4px);
+}
